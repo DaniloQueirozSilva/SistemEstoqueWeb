@@ -1,0 +1,52 @@
+﻿
+@model IEnumerable<SistemaEstoqueWeb.Models.UsuarioCadastro>
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<h2>Usuarios</h2>
+
+
+<div id="divBusca">
+    <input type="text" id="txtBusca" placeholder="Buscar..." />
+    <img
+</div>
+<table class="table table-striped table-hover table-blue">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dataNascimento)
+            </th>
+
+        </tr>
+     
+    </thead>
+    <tbody>
+      
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dataNascimento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UsuarioID)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
